@@ -1,0 +1,44 @@
+public static void main(String args[])
+{
+ Allocate new memory for player1 and player2.
+ Greet the 2 players with an introductory message.
+
+ While the result is -1
+ {
+  Ask player1 where to put an 'X' piece.
+  Check if there is already a piece on a chosen space.
+  Display "Illegal move" if it is true.
+  Otherwise, call the updateBoard function.
+  Call the gameResult function.
+  Ask player2 where to put an 'O' piece.
+  Check if there is already a piece on a chosen space.
+  Display "Illegal move" if it is true.
+  Otherwise, call the updateBoard function.
+  Call the gameResult function.
+ }
+ If the result is 1, either player1 or player2 won.
+ Display "('X' Player/'O' Player) won!"
+ If the result is -1, the game is a tie.
+ Display "Cat's game! (It's a tie...)"
+}
+
+public class GameInterface
+{
+ public GameInterface()
+ {
+  Initialize a 3x3 char array with empty spaces.
+  Print out the empty game board.
+ }
+ public int gameResult()
+ {
+  Check the arrays if there are 3 pieces in a row.
+  Return a 1 if the corresponding arrays match.
+  Return a 0 if all the spaces are filled with no match.
+  Otherwise, return a -1 to indicate the game is still in progress.
+ }
+ public void updateBoard()
+ {
+  Place the corresponding player's piece on a chosen space.
+  Update the game board with the newly inserted piece.
+ }
+}
